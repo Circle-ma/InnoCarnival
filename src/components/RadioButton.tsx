@@ -3,7 +3,6 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
-// import FormHelperText from "@mui/material/FormHelperText";
 import FormLabel from "@mui/material/FormLabel";
 import { useBtnContext } from "../context";
 
@@ -17,11 +16,6 @@ const RadioButton: React.FC<ChoiceProps> = ({ option, questionNumber }) => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     data.UserAns[questionNumber - 1] = (event.target as HTMLInputElement).value;
     data.setUserAns([...data.UserAns]);
-    // if (questionNumber === 1) {
-    //   data.setQ1UserAns((event.target as HTMLInputElement).value);
-    // } else if (questionNumber === 2) {
-    //   data.setQ2UserAns((event.target as HTMLInputElement).value);
-    // }
   };
   return (
     <FormControl>
