@@ -18,22 +18,26 @@ const SubmitBtn: React.FC<BtnPros> = ({ questions }) => {
   const [transition, setTransition] = React.useState<
     React.ComponentType<TransitionProps> | undefined
   >(undefined);
+  const [hvntAns, setHvntAns] = useState<number[]>([]);
+  const [wrongAns, setWrongAns] = useState<number[]>([]);
 
   const state = useRef(0);
   function btnHandler() {
     state.current = 1;
+    setHvntAns([]);
+    setWrongAns([]);
 
     for (let i = 0; i < questions.length; i++) {
       if (data.UserAns[i] !== questions[i].Answer) {
         state.current = 2;
-        break;
+        setWrongAns((prev) => [...prev, questions[i].questionNumber]);
       }
     }
 
     for (let i = 0; i < questions.length; i++) {
       if (data.UserAns[i] === undefined) {
         state.current = 3;
-        break;
+        setHvntAns((prev) => [...prev, questions[i].questionNumber]);
       }
     }
 
@@ -69,6 +73,8 @@ const SubmitBtn: React.FC<BtnPros> = ({ questions }) => {
         handleClose={handleClose}
         transition={transition}
         state={state.current}
+        hvntAns={hvntAns}
+        wrongAns={wrongAns}
       />
     </Box>
   );
