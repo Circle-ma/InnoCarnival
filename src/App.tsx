@@ -71,7 +71,7 @@ const App: React.FC = () => {
     },
     {
       questionNumber: 4,
-      topic: "4. Where are you from?",
+      topic: "4. Why you are here?",
       description:
         "Sometimes it's just better not to be seen. That's how Harry had always lived his life. He prided himself as being the fly on the wall and the fae that blended into the crowd. That's why he was so shocked that she noticed him.",
       option: ["A", "B", "C", "D"],
@@ -79,7 +79,7 @@ const App: React.FC = () => {
     },
     {
       questionNumber: 5,
-      topic: "5. Where are you from?",
+      topic: "5.What do you want to be?",
       description:
         "She reached her goal, exhausted. Even more chilling to her was that the euphoria that she thought she'd feel upon reaching it wasn't there. Something wasn't right. Was this the only feeling she'd have for over five years of hard work?",
       option: ["A", "B", "C", "D"],
