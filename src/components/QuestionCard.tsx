@@ -21,7 +21,6 @@ const QuestionCard: React.FC<CardProps> = ({
         <Box padding={3}>
           <Question topic={topic} description={description} />
           <RadioButton questionNumber={questionNumber} option={option} />
-          {/* <Divider sx={{ marginTop: 3 }} /> */}
         </Box>
       </Paper>
     </>

@@ -10,7 +10,6 @@ const Bg = styled.div`
   background-image: url(/doodle.jpg);
   background-size: contain;
   background-position: center center;
-  /* background-attachment: fixed; */
 `;
 
 export type CardProps = {
