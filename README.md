@@ -7,3 +7,5 @@ You can edit Questions (eg. delete,add,change details) by change Questions.ts fi
 3. run it by ### npm run start ### command
 
 4. if you want to release it, please use ### npm run build ### command to build a optimized version
+
+do whatever you want :)
