@@ -2,7 +2,7 @@ You can edit Questions (eg. delete,add,change details) by change Questions.ts fi
 
 1. install node.js
 
-2. use ### npm i ### command
+2. use ### npm i ### command to install dependence
 
 3. run it by ### npm run start ### command
 
