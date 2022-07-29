@@ -36,10 +36,10 @@ const theme = createTheme({
 });
 
 type QuestionsListProps = {
-  questions: QuestionsProps[];
+  questionsList: QuestionsProps[];
 };
 
-const App: React.FC<QuestionsListProps> = ({ questions }) => {
+const App: React.FC<QuestionsListProps> = ({ questionsList }) => {
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -48,8 +48,8 @@ const App: React.FC<QuestionsListProps> = ({ questions }) => {
           <Container>
             <Tiltle projectName="Project Name" />
             <BtnProvider>
-              <QuestionCardList questions={questions} />
-              <SubmitBtn questions={questions} />
+              <QuestionCardList questions={questionsList} />
+              <SubmitBtn questions={questionsList} />
             </BtnProvider>
           </Container>
         </Bg>

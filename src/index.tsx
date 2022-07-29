@@ -9,6 +9,6 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App questions={Questions} />
+    <App questionsList={Questions} />
   </React.StrictMode>
 );
