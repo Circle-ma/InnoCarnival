@@ -1,4 +1,4 @@
-You can edit Questions (eg. delete,add,change details) by change Questions.ts file content.
+You can edit Questions (eg. delete,add,change details) by changing Questions.ts file content.
 
 1. install node.js
 
