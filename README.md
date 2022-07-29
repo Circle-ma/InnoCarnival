@@ -1,3 +1,5 @@
+Multiple Choices template made by React + Material UI + Typescript
+
 You can edit Questions (eg. delete,add,change details) by changing Questions.ts file content.
 
 1. install node.js
