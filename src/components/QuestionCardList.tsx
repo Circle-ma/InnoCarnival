@@ -1,8 +1,8 @@
-import { CardProps } from "../App";
+import { QuestionsProps } from "../Questions";
 import QuestionCard from "./QuestionCard";
 
 type questionListProps = {
-  questions: CardProps[];
+  questions: QuestionsProps[];
 };
 
 const QuestionCardList: React.FC<questionListProps> = ({ questions }) => {

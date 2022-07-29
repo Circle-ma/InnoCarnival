@@ -1,14 +1,13 @@
 import { Box, Button, Slide, SlideProps, Typography } from "@mui/material";
-
 import DoneAllIcon from "@mui/icons-material/DoneAll";
 import { useBtnContext } from "../UserAns";
 import { useRef, useState } from "react";
 import React from "react";
-import { CardProps } from "../App";
 import Result from "./Result";
+import { QuestionsProps } from "../Questions";
 
 type BtnPros = {
-  questions: CardProps[];
+  questions: QuestionsProps[];
 };
 
 const SubmitBtn: React.FC<BtnPros> = ({ questions }) => {
