@@ -47,14 +47,14 @@ const Questions: QuestionsProps[] = [
     option: ["A", "B", "C", "D"],
     Answer: "B",
   },
-  // {
-  //   questionNumber: 6,
-  //   topic: "6.What do you want to be?",
-  //   description:
-  //     "She reached her goal, exhausted. Even more chilling to her was that the euphoria that she thought she'd feel upon reaching it wasn't there. Something wasn't right. Was this the only feeling she'd have for over five years of hard work?",
-  //   option: ["A", "B", "C", "D"],
-  //   Answer: "B",
-  // },
+  {
+    questionNumber: 6,
+    topic: "6.What do you want to be?",
+    description:
+      "She reached her goal, exhausted. Even more chilling to her was that the euphoria that she thought she'd feel upon reaching it wasn't there. Something wasn't right. Was this the only feeling she'd have for over five years of hard work?",
+    option: ["A", "B", "C", "D"],
+    Answer: "B",
+  },
   // {
   //   questionNumber: 7,
   //   topic: "7.What do you want to be?",
