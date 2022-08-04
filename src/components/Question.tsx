@@ -8,10 +8,8 @@ type QuestionProps = {
 const Question: React.FC<QuestionProps> = ({ topic, description }) => {
   return (
     <>
-      <Typography variant="h4" marginTop={3}>
-        {topic}
-      </Typography>
-      <Typography marginY={3}>{description}</Typography>
+      <Typography variant="h5">{topic}</Typography>
+      <Typography marginY={2}>{description}</Typography>
     </>
   );
 };

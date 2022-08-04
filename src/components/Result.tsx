@@ -29,14 +29,14 @@ const Result: React.FC<resultProps> = ({
     case 2:
       alert = (
         <Alert onClose={handleClose} severity="error" variant="filled">
-          Q{wrongAns.join(" ")} 答錯了.
+          Q{wrongAns.join(" ")} 答錯了!
         </Alert>
       );
       break;
     case 3:
       alert = (
         <Alert onClose={handleClose} severity="warning" variant="filled">
-          Q{hvntAns.join(" ")} 還未作答.
+          Q{hvntAns.join(" ")} 還未作答!
         </Alert>
       );
       break;

@@ -17,8 +17,8 @@ const QuestionCard: React.FC<CardProps> = ({
 }) => {
   return (
     <>
-      <Paper elevation={12} sx={{ margin: 3 }}>
-        <Box padding={3}>
+      <Paper elevation={14} sx={{ margin: 3, borderRadius: 4 }}>
+        <Box padding={2}>
           <Question topic={topic} description={description} />
           <RadioButton questionNumber={questionNumber} option={option} />
         </Box>

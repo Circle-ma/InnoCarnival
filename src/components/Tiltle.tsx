@@ -10,15 +10,10 @@ const Bg = styled.div`
 const Tiltle: React.FC<{ projectName: string }> = ({ projectName }) => {
   return (
     <>
-      <Paper
-        elevation={12}
-        sx={{
-          margin: 3,
-        }}
-      >
+      <Paper elevation={14} sx={{ margin: 3 }}>
         <Bg>
           <Typography
-            variant="h2"
+            variant="h4"
             align="center"
             padding={5}
             color="white"
