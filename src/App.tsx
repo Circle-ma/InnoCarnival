@@ -44,8 +44,8 @@ const App: React.FC<QuestionsListProps> = ({ questionsList, topic }) => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <McAppBar />
         <Bg>
+          <McAppBar />
           <Container>
             <Tiltle projectName={topic} />
             <BtnProvider>
