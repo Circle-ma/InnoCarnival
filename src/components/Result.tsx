@@ -22,21 +22,21 @@ const Result: React.FC<resultProps> = ({
     case 1:
       alert = (
         <Alert onClose={handleClose} severity="success" variant="filled">
-          答對了,做得好!
+          答對了,給你一個大大的讚!
         </Alert>
       );
       break;
     case 2:
       alert = (
         <Alert onClose={handleClose} severity="error" variant="filled">
-          Q{wrongAns.join(" ")} 答錯了!
+          Q{wrongAns.join(" ")} 答案不對哦!
         </Alert>
       );
       break;
     case 3:
       alert = (
         <Alert onClose={handleClose} severity="warning" variant="filled">
-          Q{hvntAns.join(" ")} 還未作答!
+          Q{hvntAns.join(" ")} 尚未作答!
         </Alert>
       );
       break;
