@@ -65,7 +65,7 @@ const SubmitBtn: React.FC<BtnPros> = ({ questions }) => {
         onClick={btnHandler}
         disabled={btnAble}
       >
-        <Typography>Submit</Typography>
+        <Typography>提交答案</Typography>
       </Button>
       <Result
         open={open}
