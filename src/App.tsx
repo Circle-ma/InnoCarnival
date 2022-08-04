@@ -37,16 +37,17 @@ const theme = createTheme({
 
 type QuestionsListProps = {
   questionsList: QuestionsProps[];
+  topic: string;
 };
 
-const App: React.FC<QuestionsListProps> = ({ questionsList }) => {
+const App: React.FC<QuestionsListProps> = ({ questionsList, topic }) => {
   return (
     <>
       <ThemeProvider theme={theme}>
         <McAppBar />
         <Bg>
           <Container>
-            <Tiltle projectName="Project Name" />
+            <Tiltle projectName={topic} />
             <BtnProvider>
               <QuestionCardList questions={questionsList} />
               <SubmitBtn questions={questionsList} />

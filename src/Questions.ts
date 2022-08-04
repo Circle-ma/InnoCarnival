@@ -6,6 +6,8 @@ export type QuestionsProps = {
   Answer: string;
 };
 
+export const Topic:string = "帕金森神經退行性疾病的步態動力學與可穿戴健康監測方法"
+
 const Questions: QuestionsProps[] = [
   {
     questionNumber: 1,
