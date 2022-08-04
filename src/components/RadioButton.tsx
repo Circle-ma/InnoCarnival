@@ -19,7 +19,7 @@ const RadioButton: React.FC<ChoiceProps> = ({ option, questionNumber }) => {
   };
   return (
     <FormControl>
-      <FormLabel>Answer:</FormLabel>
+      <FormLabel>答案:</FormLabel>
       <RadioGroup onChange={handleChange}>
         <FormControlLabel
           value="A"
