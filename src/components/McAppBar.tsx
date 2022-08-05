@@ -7,6 +7,7 @@ import { IconButton, Menu, MenuItem } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useBtnContext } from "../UserAns";
 // import { createTheme, ThemeProvider } from "@mui/material";
 
 // const theme = createTheme({
@@ -42,6 +43,7 @@ import { useNavigate } from "react-router-dom";
 // }
 
 export default function McAppBar() {
+  const data = useBtnContext();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -71,6 +73,7 @@ export default function McAppBar() {
           <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
             <MenuItem
               onClick={() => {
+                data.setUserAns([]);
                 navigate("../bug");
               }}
             >
@@ -78,6 +81,7 @@ export default function McAppBar() {
             </MenuItem>
             <MenuItem
               onClick={() => {
+                data.setUserAns([]);
                 navigate("../dna");
               }}
             >
@@ -85,6 +89,7 @@ export default function McAppBar() {
             </MenuItem>
             <MenuItem
               onClick={() => {
+                data.setUserAns([]);
                 navigate("../herbchain");
               }}
             >
@@ -92,6 +97,7 @@ export default function McAppBar() {
             </MenuItem>
             <MenuItem
               onClick={() => {
+                data.setUserAns([]);
                 navigate("../parkinson");
               }}
             >
@@ -99,6 +105,7 @@ export default function McAppBar() {
             </MenuItem>
             <MenuItem
               onClick={() => {
+                data.setUserAns([]);
                 navigate("../solidLight");
               }}
             >

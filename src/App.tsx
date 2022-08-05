@@ -45,14 +45,14 @@ const App: React.FC<QuestionsListProps> = ({ questionsList, topic }) => {
     <>
       <ThemeProvider theme={theme}>
         <Bg>
-          <McAppBar />
-          <Container>
-            <Tiltle projectName={topic} />
-            <BtnProvider>
+          <BtnProvider>
+            <McAppBar />
+            <Container>
+              <Tiltle projectName={topic} />
               <QuestionCardList questions={questionsList} />
               <SubmitBtn questions={questionsList} />
-            </BtnProvider>
-          </Container>
+            </Container>
+          </BtnProvider>
         </Bg>
       </ThemeProvider>
     </>
