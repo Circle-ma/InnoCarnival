@@ -6,7 +6,7 @@ export type QuestionsProps = {
   Answer: string;
 };
 
-export const Topic:string = "基於單細胞測序的疾病診斷"
+export const dnaTopic: string = "基於單細胞測序的疾病診斷";
 
 const Questions: QuestionsProps[] = [
   {
@@ -14,30 +14,37 @@ const Questions: QuestionsProps[] = [
     topic: "第一題",
     description:
       "新的分析單細胞測序數據的統計學方法可以準確地分析什麽單細胞測序數據？",
-    option: ["A:	細胞聚類為不同的細胞類", "B:	估計各細胞類的比例", "C:	及識別患者和健康人群之間比例不同的細胞類", "D:	以上皆是"],
+    option: [
+      "A:	細胞聚類為不同的細胞類",
+      "B:	估計各細胞類的比例",
+      "C:	及識別患者和健康人群之間比例不同的細胞類",
+      "D:	以上皆是",
+    ],
     Answer: "D",
   },
   {
     questionNumber: 2,
     topic: "第二題",
-    description:
-      "在中紅外頻譜中，我們實現了什麽水平的揮發性有機化合物傳感？",
+    description: "在中紅外頻譜中，我們實現了什麽水平的揮發性有機化合物傳感？",
     option: ["A:	1%", "B:	5%", "C:	10%", "D:	21%"],
     Answer: "D",
   },
   {
     questionNumber: 3,
     topic: "第三題",
-    description:
-      "以下哪一項不是可穿戴健康監測與帕金森智能診斷系統的優勢？",
-    option: ["A:	對檢測稀有的細胞類型具有高精度", "B:	對檢測患者和健康人群之間細胞組成比例的變化不敏感", "C:	不能整合採自不同實驗室的數據進行分析", "D:	可對5個的細胞進行快速計算"],
+    description: "以下哪一項不是可穿戴健康監測與帕金森智能診斷系統的優勢？",
+    option: [
+      "A:	對檢測稀有的細胞類型具有高精度",
+      "B:	對檢測患者和健康人群之間細胞組成比例的變化不敏感",
+      "C:	不能整合採自不同實驗室的數據進行分析",
+      "D:	可對5個的細胞進行快速計算",
+    ],
     Answer: "A",
   },
   {
     questionNumber: 4,
     topic: "第四題",
-    description:
-      "新的分析單細胞測序數據的統計學方法能夠引用於以下哪些檢測？",
+    description: "新的分析單細胞測序數據的統計學方法能夠引用於以下哪些檢測？",
     option: ["A:	血液檢測", "B:	尿液檢測", "C:	病理化驗", "D:	以上皆是"],
     Answer: "D",
   },

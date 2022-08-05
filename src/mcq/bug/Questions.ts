@@ -6,14 +6,14 @@ export type QuestionsProps = {
   Answer: string;
 };
 
-export const Topic:string = "為新農民提供互動及可持續的平台(第一階段)：香港農業常見的害蟲"
+export const bugTopic: string =
+  "為新農民提供互動及可持續的平台(第一階段)：香港農業常見的害蟲";
 
 const Questions: QuestionsProps[] = [
   {
     questionNumber: 1,
     topic: "第一題",
-    description:
-      "本地主要的作物生產為？",
+    description: "本地主要的作物生產為？",
     option: ["A:	小麥和稻米", "B:	蔬菜和花卉", "C:	水果", "D:	甘蔗和粟米"],
     Answer: "B",
   },
@@ -28,8 +28,7 @@ const Questions: QuestionsProps[] = [
   {
     questionNumber: 3,
     topic: "第三題",
-    description:
-      "透過流動應用程式，用戶可以透過什麽上載圖片到網站上？",
+    description: "透過流動應用程式，用戶可以透過什麽上載圖片到網站上？",
     option: ["A:	手機拍照", "B:	郵寄", "C:	信息", "D:	電子郵件"],
     Answer: "A",
   },

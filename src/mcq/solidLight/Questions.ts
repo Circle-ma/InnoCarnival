@@ -6,7 +6,7 @@ export type QuestionsProps = {
   Answer: string;
 };
 
-export const Topic:string = "用於傳感應用的周期性納米結構"
+export const solidLightTopic: string = "用於傳感應用的周期性納米結構";
 
 const Questions: QuestionsProps[] = [
   {
@@ -20,25 +20,32 @@ const Questions: QuestionsProps[] = [
   {
     questionNumber: 2,
     topic: "第二題",
-    description:
-      "在中紅外頻譜中，我們實現了什麽水平的揮發性有機化合物傳感？",
+    description: "在中紅外頻譜中，我們實現了什麽水平的揮發性有機化合物傳感？",
     option: ["A:	一百分之一", "B:	一萬分之一", "C:	一億分之一", "D:	十億分之一"],
     Answer: "D",
   },
   {
     questionNumber: 3,
     topic: "第三題",
-    description:
-      "以下哪一項不是可穿戴健康監測與帕金森智能診斷系統的優勢？",
-    option: ["A:	低濃度的PM 0.1 和 PM 0.3", "B:	pH值", "C:	空氣污染指數", "D:	COVID-19 和流感病毒"],
+    description: "以下哪一項不是可穿戴健康監測與帕金森智能診斷系統的優勢？",
+    option: [
+      "A:	低濃度的PM 0.1 和 PM 0.3",
+      "B:	pH值",
+      "C:	空氣污染指數",
+      "D:	COVID-19 和流感病毒",
+    ],
     Answer: "A",
   },
   {
     questionNumber: 4,
     topic: "第四題",
-    description:
-      "如何應用納米級週期性納米結構光學傳感器？",
-    option: ["A:	氣體傳感器或電子鼻，用於環境監測和呼出氣活檢", "B:	用於環境和污染監測的 PM 傳感器", "C:	用於醫學診斷和環境監測的病毒傳感器。", "D:	以上皆是"],
+    description: "如何應用納米級週期性納米結構光學傳感器？",
+    option: [
+      "A:	氣體傳感器或電子鼻，用於環境監測和呼出氣活檢",
+      "B:	用於環境和污染監測的 PM 傳感器",
+      "C:	用於醫學診斷和環境監測的病毒傳感器。",
+      "D:	以上皆是",
+    ],
     Answer: "D",
   },
   // {

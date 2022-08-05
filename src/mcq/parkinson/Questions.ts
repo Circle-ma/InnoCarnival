@@ -6,39 +6,46 @@ export type QuestionsProps = {
   Answer: string;
 };
 
-export const Topic:string = "帕金森神經退行性疾病的步態動力學與可穿戴健康監測方法"
+export const parkinsonTopic: string =
+  "帕金森神經退行性疾病的步態動力學與可穿戴健康監測方法";
 
 const Questions: QuestionsProps[] = [
   {
     questionNumber: 1,
     topic: "第一題",
-    description:
-      "本項目透過什麽來形成帕金森病步態綜合量化評價指標？",
+    description: "本項目透過什麽來形成帕金森病步態綜合量化評價指標？",
     option: ["A:	肌電信號", "B:	運動學參數", "C:	動力學參數", "D:	以上皆是"],
     Answer: "D",
   },
   {
     questionNumber: 2,
     topic: "第二題",
-    description:
-      "可穿戴健康監測與帕金森智能診斷系統能夠為帕金遜病人提供什麽？",
-    option: ["A:	治愈帕金森病人", "B:	幫助帕金森病人穩定動作", "C:	便捷且準確的日常監測與早期診斷服務", "D:	防止帕金森神經退行性疾病"],
+    description: "可穿戴健康監測與帕金森智能診斷系統能夠為帕金遜病人提供什麽？",
+    option: [
+      "A:	治愈帕金森病人",
+      "B:	幫助帕金森病人穩定動作",
+      "C:	便捷且準確的日常監測與早期診斷服務",
+      "D:	防止帕金森神經退行性疾病",
+    ],
     Answer: "C",
   },
   {
     questionNumber: 3,
     topic: "第三題",
-    description:
-      "以下哪一項不是可穿戴健康監測與帕金森智能診斷系統的優勢？",
+    description: "以下哪一項不是可穿戴健康監測與帕金森智能診斷系統的優勢？",
     option: ["A:	針對性強", "B:	前瞻性強", "C:	輕便可靠", "D:	保護性強"],
     Answer: "D",
   },
   {
     questionNumber: 4,
     topic: "第四題",
-    description:
-      "如何應用可穿戴健康監測與帕金森智能診斷系統？",
-    option: ["A:	老年人的健康狀態評估", "B:	帕金森病早期診斷和治療的精準健康護理", "C:	對帕金森患者的即時長期監測與突發事件報警", "D:	以上皆是"],
+    description: "如何應用可穿戴健康監測與帕金森智能診斷系統？",
+    option: [
+      "A:	老年人的健康狀態評估",
+      "B:	帕金森病早期診斷和治療的精準健康護理",
+      "C:	對帕金森患者的即時長期監測與突發事件報警",
+      "D:	以上皆是",
+    ],
     Answer: "D",
   },
   // {
