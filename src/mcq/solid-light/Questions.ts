@@ -6,40 +6,40 @@ export type QuestionsProps = {
   Answer: string;
 };
 
-export const Topic:string = "HerBChain草藥鏈 - 一個由區塊鏈系統操作的資訊平台以提升中草藥產品的質量"
+export const Topic:string = "用於傳感應用的周期性納米結構"
 
 const Questions: QuestionsProps[] = [
   {
     questionNumber: 1,
     topic: "第一題",
     description:
-      "為了促進中藥業界的發展，我們建立了一個透過什麽技術記錄中草藥產品由生長到產品銷售的一站式服務平台？",
-    option: ["A:	區塊鏈技術", "B:	數碼存根技術 (Cookies)", "C:	記錄檔案技術 (Log Files)", "D:	網站信號技術 (Web Beacons)"],
-    Answer: "A",
+      "開發不同類型的光學傳感器，將納米結構的光學特性應用於什麽的傳感？",
+    option: ["A: 氣體", "B:	病毒", "C:	顆粒物 (PM)", "D:	以上皆是"],
+    Answer: "D",
   },
   {
     questionNumber: 2,
     topic: "第二題",
     description:
-      "「草藥鏈」包含不同的「節點」，其中包括哪些「節點」？",
-    option: ["A:	種植管理", "B:	加工管理", "C:	生產管理", "D:	以上皆是"],
+      "在中紅外頻譜中，我們實現了什麽水平的揮發性有機化合物傳感？",
+    option: ["A:	一百分之一", "B:	一萬分之一", "C:	一億分之一", "D:	十億分之一"],
     Answer: "D",
   },
   {
     questionNumber: 3,
     topic: "第三題",
     description:
-      "以下哪項不是「草藥鏈」的好處？",
-    option: ["A:	提供品質更好的中草藥", "B:	減低市場上中藥材魚目混珠的情況", "C:	提高產品質量的透明度", "D:	加強業界的國際貿易"],
+      "以下哪一項不是可穿戴健康監測與帕金森智能診斷系統的優勢？",
+    option: ["A:	低濃度的PM 0.1 和 PM 0.3", "B:	pH值", "C:	空氣污染指數", "D:	COVID-19 和流感病毒"],
     Answer: "A",
   },
   {
     questionNumber: 4,
     topic: "第四題",
     description:
-      "如何保證中藥貿易產品的真確性？",
-    option: ["A:	電話查詢", "B:	透過電子真偽認證標籤及連結商品線上交易平台", "C:	電子郵件確認", "D:	查詢中醫院"],
-    Answer: "B",
+      "如何應用納米級週期性納米結構光學傳感器？",
+    option: ["A:	氣體傳感器或電子鼻，用於環境監測和呼出氣活檢", "B:	用於環境和污染監測的 PM 傳感器", "C:	用於醫學診斷和環境監測的病毒傳感器。", "D:	以上皆是"],
+    Answer: "D",
   },
   // {
   //   questionNumber: 5,
