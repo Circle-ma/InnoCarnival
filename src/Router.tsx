@@ -5,8 +5,13 @@ import dnaQ, { dnaTopic } from "./mcq/dna/Questions";
 import herbChainQ, { herbChainTopic } from "./mcq/herbchain/Questions";
 import parkinsonQ, { parkinsonTopic } from "./mcq/parkinson/Questions";
 import solidLightQ, { solidLightTopic } from "./mcq/solidLight/Questions";
+import Questions, { Topic } from "./Questions";
 
 const routerConfig: RouteObject[] = [
+  {
+    path: "/",
+    element: <App questionsList={Questions} topic={Topic} />,
+  },
   {
     path: "/bug",
     element: <App questionsList={bugQ} topic={bugTopic} />,
