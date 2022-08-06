@@ -7,7 +7,7 @@ import { IconButton, Menu, MenuItem } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useBtnContext } from "../UserAns";
+// import { useBtnContext } from "../UserAns";
 // import { createTheme, ThemeProvider } from "@mui/material";
 
 // const theme = createTheme({
@@ -43,7 +43,7 @@ import { useBtnContext } from "../UserAns";
 // }
 
 export default function McAppBar() {
-  const data = useBtnContext();
+  // const data = useBtnContext();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -73,40 +73,45 @@ export default function McAppBar() {
           <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
             <MenuItem
               onClick={() => {
-                data.setUserAns([]);
+                // data.setUserAns([]);
                 navigate("../bug");
+                window.location.reload();
               }}
             >
               香港農業常見的害蟲
             </MenuItem>
             <MenuItem
               onClick={() => {
-                data.setUserAns([]);
+                // data.setUserAns([]);
                 navigate("../dna");
+                window.location.reload();
               }}
             >
               單細胞測序疾病診斷
             </MenuItem>
             <MenuItem
               onClick={() => {
-                data.setUserAns([]);
+                // data.setUserAns([]);
                 navigate("../herbchain");
+                window.location.reload();
               }}
             >
               HerBChain草藥鏈
             </MenuItem>
             <MenuItem
               onClick={() => {
-                data.setUserAns([]);
+                // data.setUserAns([]);
                 navigate("../parkinson");
+                window.location.reload();
               }}
             >
               帕金森病步態與可穿戴監測
             </MenuItem>
             <MenuItem
               onClick={() => {
-                data.setUserAns([]);
+                // data.setUserAns([]);
                 navigate("../solidLight");
+                window.location.reload();
               }}
             >
               傳感應用的周期性納米結構
