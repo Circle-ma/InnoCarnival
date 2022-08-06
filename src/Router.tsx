@@ -5,10 +5,10 @@ import dnaQ, { dnaTopic } from "./mcq/dna/Questions";
 import herbChainQ, { herbChainTopic } from "./mcq/herbchain/Questions";
 import parkinsonQ, { parkinsonTopic } from "./mcq/parkinson/Questions";
 import solidLightQ, { solidLightTopic } from "./mcq/solidLight/Questions";
-import Questions, { Topic } from "./Questions";
+import Questions, { ProjectName } from "./Questions";
 
-const routerList = [
-  { Name: Topic, path: "/", questionsList: Questions, navigate: "../" },
+const projectList = [
+  { Name: ProjectName, path: "/", questionsList: Questions, navigate: "../" },
   { Name: bugTopic, path: "/bug", questionsList: bugQ, navigate: "../bug" },
   { Name: dnaTopic, path: "/dna", questionsList: dnaQ, navigate: "../dna" },
   {
@@ -31,11 +31,11 @@ const routerList = [
   },
 ];
 
-const linkList = routerList.map((project) => {
+const linkList = projectList.map((project) => {
   return { navigate: project.navigate, projectName: project.Name };
 });
 
-const routerConfig = routerList.map((project) => {
+const routerConfig = projectList.map((project) => {
   return {
     path: project.path,
     element: (

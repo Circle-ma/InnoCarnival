@@ -6,7 +6,7 @@ export type QuestionsProps = {
   Answer: string;
 };
 
-export const Topic: string = "Main";
+export const ProjectName: string = "Main";
 
 const Questions: QuestionsProps[] = [
   {
