@@ -1,8 +1,8 @@
 Multiple Choices template made by React + Material UI + React Router + Typescript
 
-Router function is still in the trial stage, I will use Next.js in the future to improve.
+You can edit the main page Topic and Questions (eg. delete,add,change details) by changing /src/Questions.ts file content.
 
-You can edit Questions (eg. delete,add,change details) by changing /src/Questions.ts file content.
+If you want to add more pages of questions, you can put your Questions.ts into mcq file and import to /src/Router.tsx and edit routerList content
 
 1. install node.js
 
