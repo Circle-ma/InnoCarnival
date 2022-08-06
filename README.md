@@ -2,7 +2,7 @@ Multiple Choices template made by React + Material UI + React Router + Typescrip
 
 You can edit the main page Project Name and Questions (eg. delete,add,change details) by changing /src/Questions.ts file content.
 
-If you want to add more pages of questions, you can put your Questions.ts into mcq file and import the Project Name and Questions to /src/Router.tsx and edit routerList content
+If you want to add more project questions, you can put your Questions.ts into mcq file and import the Project Name and Questions to /src/Router.tsx and edit routerList content
 
 1. install node.js
 
