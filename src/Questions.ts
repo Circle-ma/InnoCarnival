@@ -13,7 +13,7 @@ const Questions: QuestionsProps[] = [
     questionNumber: 1,
     topic: "第一題",
     description:
-      "為了促進中藥業界的發展，我們建立了一個透過什麽技術記錄中草藥產品由生長到產品銷售的一站式服務平台？",
+      "🤖為了促進中藥業界的發展，我們建立了一個透過什麽技術記錄中草藥產品由生長到產品銷售的一站式服務平台？",
     option: ["A:	Y", "B:	M", "C:	C", "D:	A"],
     Answer: "A",
   },
