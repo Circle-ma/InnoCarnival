@@ -6,7 +6,7 @@ export type QuestionsProps = {
   Answer: string;
 };
 
-export const ProjectName: string = "Main";
+export const ProjectName: string = "Homepage";
 
 const Questions: QuestionsProps[] = [
   {
@@ -14,12 +14,7 @@ const Questions: QuestionsProps[] = [
     topic: "第一題",
     description:
       "為了促進中藥業界的發展，我們建立了一個透過什麽技術記錄中草藥產品由生長到產品銷售的一站式服務平台？",
-    option: [
-      "A:	區塊鏈技術",
-      "B:	數碼存根技術 (Cookies)",
-      "C:	記錄檔案技術 (Log Files)",
-      "D:	網站信號技術 (Web Beacons)",
-    ],
+    option: ["A:	Y", "B:	M", "C:	C", "D:	A"],
     Answer: "A",
   },
   {
