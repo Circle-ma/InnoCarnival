@@ -42,7 +42,9 @@ import { useNavigate } from "react-router-dom";
 //   }
 // }
 
-export default function McAppBar() {
+const McAppBar: React.FC<{
+  linkList: { navigate: string; projectName: string }[];
+}> = ({ linkList }) => {
   // const data = useBtnContext();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -71,7 +73,20 @@ export default function McAppBar() {
             <MenuIcon fontSize="large" />
           </IconButton>
           <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
-            <MenuItem
+            {linkList.map((project) => {
+              return (
+                <MenuItem
+                  onClick={() => {
+                    // data.setUserAns([]);
+                    navigate(project.navigate);
+                    window.location.reload();
+                  }}
+                >
+                  {project.projectName}
+                </MenuItem>
+              );
+            })}
+            {/* <MenuItem
               onClick={() => {
                 // data.setUserAns([]);
                 navigate("../bug");
@@ -115,11 +130,13 @@ export default function McAppBar() {
               }}
             >
               傳感應用的周期性納米結構
-            </MenuItem>
+            </MenuItem> */}
           </Menu>
         </Toolbar>
       </AppBar>
     </Box>
     // </ThemeProvider>
   );
-}
+};
+
+export default McAppBar;

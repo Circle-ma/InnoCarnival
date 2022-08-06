@@ -37,20 +37,25 @@ const theme = createTheme({
 
 type QuestionsListProps = {
   questionsList: QuestionsProps[];
-  topic: string;
+  projectName: string;
+  linkList: { navigate: string; projectName: string }[];
 };
 
-const App: React.FC<QuestionsListProps> = ({ questionsList, topic }) => {
+const App: React.FC<QuestionsListProps> = ({
+  questionsList,
+  projectName,
+  linkList,
+}) => {
   return (
     <>
       <ThemeProvider theme={theme}>
         <Bg>
-          <McAppBar />
+          <McAppBar linkList={linkList} />
           <Container>
-            <Tiltle projectName={topic} />
+            <Tiltle projectName={projectName} />
             <BtnProvider>
               <QuestionCardList questions={questionsList} />
-              <SubmitBtn questions={questionsList} />{" "}
+              <SubmitBtn questions={questionsList} projectName={projectName} />
             </BtnProvider>
           </Container>
         </Bg>

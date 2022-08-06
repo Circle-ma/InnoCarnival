@@ -1,4 +1,4 @@
-import { RouteObject, useRoutes } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
 import App from "./App";
 import bugQ, { bugTopic } from "./mcq/bug/Questions";
 import dnaQ, { dnaTopic } from "./mcq/dna/Questions";
@@ -7,32 +7,73 @@ import parkinsonQ, { parkinsonTopic } from "./mcq/parkinson/Questions";
 import solidLightQ, { solidLightTopic } from "./mcq/solidLight/Questions";
 import Questions, { Topic } from "./Questions";
 
-const routerConfig: RouteObject[] = [
+const routerList = [
+  { Name: Topic, path: "/", questionsList: Questions, navigate: "../" },
+  { Name: bugTopic, path: "/bug", questionsList: bugQ, navigate: "../bug" },
+  { Name: dnaTopic, path: "/dna", questionsList: dnaQ, navigate: "../dna" },
   {
-    path: "/",
-    element: <App questionsList={Questions} topic={Topic} />,
-  },
-  {
-    path: "/bug",
-    element: <App questionsList={bugQ} topic={bugTopic} />,
-  },
-  {
-    path: "/dna",
-    element: <App questionsList={dnaQ} topic={dnaTopic} />,
-  },
-  {
+    Name: herbChainTopic,
     path: "/herbchain",
-    element: <App questionsList={herbChainQ} topic={herbChainTopic} />,
+    questionsList: herbChainQ,
+    navigate: "../herbchain",
   },
   {
     path: "/parkinson",
-    element: <App questionsList={parkinsonQ} topic={parkinsonTopic} />,
+    questionsList: parkinsonQ,
+    navigate: "../parkinson",
+    Name: parkinsonTopic,
   },
   {
+    Name: solidLightTopic,
     path: "/solidLight",
-    element: <App questionsList={solidLightQ} topic={solidLightTopic} />,
+    questionsList: solidLightQ,
+    navigate: "../solidLight",
   },
 ];
+
+const linkList = routerList.map((project) => {
+  return { navigate: project.navigate, projectName: project.Name };
+});
+
+const routerConfig = routerList.map((project) => {
+  return {
+    path: project.path,
+    element: (
+      <App
+        questionsList={project.questionsList}
+        projectName={project.Name}
+        linkList={linkList}
+      />
+    ),
+  };
+});
+
+// const routerConfig: RouteObject[] = [
+//   {
+//     path: routerList[0].path,
+//     element: <App questionsList={routerList[0].questionsList} topic={routerList[0].topic} />,
+//   },
+// {
+//   path: "/bug",
+//   element: <App questionsList={bugQ} topic={bugTopic} />,
+// },
+// {
+//   path: "/dna",
+//   element: <App questionsList={dnaQ} topic={dnaTopic} />,
+// },
+// {
+//   path: "/herbchain",
+//   element: <App questionsList={herbChainQ} topic={herbChainTopic} />,
+// },
+// {
+//   path: "/parkinson",
+//   element: <App questionsList={parkinsonQ} topic={parkinsonTopic} />,
+// },
+// {
+//   path: "/solidLight",
+//   element: <App questionsList={solidLightQ} topic={solidLightTopic} />,
+// },
+// ];
 
 const Router: React.FC = () => {
   const element = useRoutes(routerConfig);

@@ -1,4 +1,4 @@
-import { Alert, SlideProps, Snackbar } from "@mui/material";
+import { Alert, AlertTitle, SlideProps, Snackbar } from "@mui/material";
 
 type resultProps = {
   open: boolean;
@@ -7,6 +7,7 @@ type resultProps = {
   state: number;
   hvntAns: number[];
   wrongAns: number[];
+  projectName: string;
 };
 
 const Result: React.FC<resultProps> = ({
@@ -16,12 +17,14 @@ const Result: React.FC<resultProps> = ({
   state,
   hvntAns,
   wrongAns,
+  projectName,
 }) => {
   let alert: JSX.Element;
   switch (state) {
     case 1:
       alert = (
         <Alert onClose={handleClose} severity="success" variant="filled">
+          <AlertTitle>{projectName}</AlertTitle>
           答對了,給你一個大大的讚!
         </Alert>
       );
@@ -29,14 +32,15 @@ const Result: React.FC<resultProps> = ({
     case 2:
       alert = (
         <Alert onClose={handleClose} severity="error" variant="filled">
-          Q{wrongAns.join(" ")} 答案不對哦!
+          <AlertTitle>{projectName}</AlertTitle>Q{wrongAns.join(" ")}{" "}
+          答案不對哦!
         </Alert>
       );
       break;
     case 3:
       alert = (
         <Alert onClose={handleClose} severity="warning" variant="filled">
-          Q{hvntAns.join(" ")} 尚未作答!
+          <AlertTitle>{projectName}</AlertTitle>Q{hvntAns.join(" ")} 尚未作答!
         </Alert>
       );
       break;

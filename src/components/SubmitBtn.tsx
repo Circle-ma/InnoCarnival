@@ -8,9 +8,10 @@ import { QuestionsProps } from "../Questions";
 
 type BtnPros = {
   questions: QuestionsProps[];
+  projectName: string;
 };
 
-const SubmitBtn: React.FC<BtnPros> = ({ questions }) => {
+const SubmitBtn: React.FC<BtnPros> = ({ questions, projectName }) => {
   const data = useBtnContext();
   const [btnAble, setBtnAble] = useState(false);
   const [open, setOpen] = useState(false);
@@ -74,6 +75,7 @@ const SubmitBtn: React.FC<BtnPros> = ({ questions }) => {
         state={state.current}
         hvntAns={hvntAns}
         wrongAns={wrongAns}
+        projectName={projectName}
       />
     </Box>
   );
