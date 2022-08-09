@@ -8,7 +8,7 @@ import solidLightQ, { solidLightTopic } from "./mcq/solidLight/Questions";
 import Questions, { ProjectName } from "./Questions";
 
 const projectList = [
-  { Name: ProjectName, path: "/", questionsList: Questions, navigate: "../" },
+  // { Name: ProjectName, path: "/", questionsList: Questions, navigate: "../" },
   { Name: bugTopic, path: "/bug", questionsList: bugQ, navigate: "../bug" },
   { Name: dnaTopic, path: "/dna", questionsList: dnaQ, navigate: "../dna" },
   {
