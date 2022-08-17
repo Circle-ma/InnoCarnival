@@ -1,27 +1,27 @@
-import styled from "@emotion/styled";
 import { Paper, Typography } from "@mui/material";
-
-const Bg = styled.div`
-  background-image: url(/bluetri.png);
-  background-size: cover;
-  background-position: center center;
-`;
 
 const Tiltle: React.FC<{ projectName: string }> = ({ projectName }) => {
   return (
     <>
-      <Paper elevation={14} sx={{ margin: 3 }}>
-        <Bg>
-          <Typography
-            variant="h4"
-            align="center"
-            padding={5}
-            color="white"
-            fontWeight="bold"
-          >
-            {projectName}
-          </Typography>{" "}
-        </Bg>
+      <Paper
+        elevation={14}
+        sx={{
+          margin: 3,
+          backgroundImage: "url(/bluetri.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          borderRadius: 4,
+        }}
+      >
+        <Typography
+          variant="h4"
+          align="center"
+          padding={5}
+          color="white"
+          fontWeight="bold"
+        >
+          {projectName}
+        </Typography>{" "}
       </Paper>
     </>
   );
