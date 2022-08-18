@@ -27,7 +27,7 @@ const Questions: QuestionsProps[] = [
   {
     questionNumber: 3,
     topic: "第三題",
-    description: "以下哪一項不是可穿戴健康監測與帕金森智能診斷系統的優勢？",
+    description: "傳感器現在可用於檢測什麽？",
     option: [
       "A:	低濃度的PM 0.1 和 PM 0.3",
       "B:	pH值",

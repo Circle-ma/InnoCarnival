@@ -25,14 +25,15 @@ const Questions: QuestionsProps[] = [
   {
     questionNumber: 2,
     topic: "第二題",
-    description: "在中紅外頻譜中，我們實現了什麽水平的揮發性有機化合物傳感？",
+    description:
+      "對真實數據的分析顯示新的分析單細胞測序數據的統計學方法在細胞聚類的準確度上比現有的方法高出多少%？",
     option: ["A:	1%", "B:	5%", "C:	10%", "D:	21%"],
     Answer: "D",
   },
   {
     questionNumber: 3,
     topic: "第三題",
-    description: "以下哪一項不是可穿戴健康監測與帕金森智能診斷系統的優勢？",
+    description: "以下哪一項是新的分析單細胞測序數據的統計學方法的好處？",
     option: [
       "A:	對檢測稀有的細胞類型具有高精度",
       "B:	對檢測患者和健康人群之間細胞組成比例的變化不敏感",

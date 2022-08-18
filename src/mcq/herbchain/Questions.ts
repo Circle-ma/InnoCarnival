@@ -16,7 +16,7 @@ const Questions: QuestionsProps[] = [
     description:
       "為了促進中藥業界的發展，我們建立了一個透過什麽技術記錄中草藥產品由生長到產品銷售的一站式服務平台？",
     option: [
-      "A:	區塊鏈技術",
+      "A:	區塊鏈技術 (Blockchain)",
       "B:	數碼存根技術 (Cookies)",
       "C:	記錄檔案技術 (Log Files)",
       "D:	網站信號技術 (Web Beacons)",
