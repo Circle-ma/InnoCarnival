@@ -30,7 +30,7 @@ const McAppBar: React.FC<{
             marginLeft={2}
             sx={{ flexGrow: 1 }}
           >
-            創新嘉年華InnoCarnival
+            創新科技嘉年華InnoCarnival
           </Typography>
           <IconButton color="inherit" sx={{ mr: 2 }} onClick={handleClick}>
             <MenuIcon fontSize="large" />
