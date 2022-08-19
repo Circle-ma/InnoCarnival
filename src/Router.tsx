@@ -48,33 +48,6 @@ const routerConfig = projectList.map((project) => {
   };
 });
 
-// const routerConfig: RouteObject[] = [
-//   {
-//     path: routerList[0].path,
-//     element: <App questionsList={routerList[0].questionsList} topic={routerList[0].topic} />,
-//   },
-// {
-//   path: "/bug",
-//   element: <App questionsList={bugQ} topic={bugTopic} />,
-// },
-// {
-//   path: "/dna",
-//   element: <App questionsList={dnaQ} topic={dnaTopic} />,
-// },
-// {
-//   path: "/herbchain",
-//   element: <App questionsList={herbChainQ} topic={herbChainTopic} />,
-// },
-// {
-//   path: "/parkinson",
-//   element: <App questionsList={parkinsonQ} topic={parkinsonTopic} />,
-// },
-// {
-//   path: "/solidLight",
-//   element: <App questionsList={solidLightQ} topic={solidLightTopic} />,
-// },
-// ];
-
 const Router: React.FC = () => {
   const element = useRoutes(routerConfig);
   return <>{element}</>;
