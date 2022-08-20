@@ -5,7 +5,7 @@ import dnaQ, { dnaTopic } from "./mcq/dna/Questions";
 import herbChainQ, { herbChainTopic } from "./mcq/herbchain/Questions";
 import parkinsonQ, { parkinsonTopic } from "./mcq/parkinson/Questions";
 import solidLightQ, { solidLightTopic } from "./mcq/solidLight/Questions";
-import Questions, { ProjectName } from "./Questions";
+// import Questions, { ProjectName } from "./Questions";
 
 const projectList = [
   // { Name: ProjectName, path: "/", questionsList: Questions, navigate: "../" },
