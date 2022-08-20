@@ -23,9 +23,9 @@ const McAppBar: React.FC<{
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <img src="CU.png" alt="cu" width={80}></img>
+          <img src="CU.png" alt="cu" width={60}></img>
           <Typography
-            variant="h3"
+            variant="h5"
             fontStyle="oblique"
             marginLeft={2}
             sx={{ flexGrow: 1 }}
