@@ -23,7 +23,7 @@ const McAppBar: React.FC<{
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <img src="CU.png" alt="cu" width={60}></img>
+          <img src="CUlogo.svg" alt="cu" width={60}></img>
           <Typography
             variant="h5"
             fontStyle="oblique"
