@@ -9,7 +9,8 @@ import React from "react";
 
 const McAppBar: React.FC<{
   linkList: { navigate: string; projectName: string }[];
-}> = ({ linkList }) => {
+  email: string | null;
+}> = ({ linkList, email }) => {
   // const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   // const open = Boolean(anchorEl);
   // const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -25,12 +26,12 @@ const McAppBar: React.FC<{
         <Toolbar>
           <img src="CUlogo.svg" alt="cu" width={60}></img>
           <Typography
-            variant="h5"
+            variant="h4"
             fontStyle="oblique"
             marginLeft={2}
             sx={{ flexGrow: 1 }}
           >
-            創新科技嘉年華InnoCarnival
+            創新科技嘉年華InnoCarnival<Typography>{email}</Typography>
           </Typography>
           {/* <IconButton color="inherit" sx={{ mr: 2 }} onClick={handleClick}>
             <MenuIcon fontSize="large" />

@@ -6,6 +6,7 @@ import Tiltle from "./components/Tiltle";
 import { BtnProvider } from "./UserAns";
 import QuestionCardList from "./components/QuestionCardList";
 import { QuestionsProps } from "./Questions";
+import { useSearchParams } from "react-router-dom";
 
 const Bg = styled.div`
   background-image: url(/doodle.jpg);
@@ -46,11 +47,16 @@ const App: React.FC<QuestionsListProps> = ({
   projectName,
   linkList,
 }) => {
+  let [searchParams] = useSearchParams();
+  let email = searchParams.get("email");
+  //const apps_id = searchParams.get("apps_id");
+  //const token = searchParams.get("token");
+
   return (
     <>
       <ThemeProvider theme={theme}>
         <Bg>
-          <McAppBar linkList={linkList} />
+          <McAppBar linkList={linkList} email={email} />
           <Container>
             <Tiltle projectName={projectName} />
             <BtnProvider>
