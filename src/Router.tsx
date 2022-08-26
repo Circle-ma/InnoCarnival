@@ -9,25 +9,40 @@ import solidLightQ, { solidLightTopic } from "./mcq/solidLight/Questions";
 
 const projectList = [
   // { Name: ProjectName, path: "/", questionsList: Questions, navigate: "../" },
-  { Name: bugTopic, path: "/bug", questionsList: bugQ, navigate: "../bug" },
-  { Name: dnaTopic, path: "/dna", questionsList: dnaQ, navigate: "../dna" },
+  {
+    Name: bugTopic,
+    path: "/bug",
+    questionsList: bugQ,
+    navigate: "../bug",
+    apps_id: "app02",
+  },
+  {
+    Name: dnaTopic,
+    path: "/dna",
+    questionsList: dnaQ,
+    navigate: "../dna",
+    apps_id: "app01",
+  },
   {
     Name: herbChainTopic,
     path: "/herbchain",
     questionsList: herbChainQ,
     navigate: "../herbchain",
+    apps_id: "app03",
   },
   {
     path: "/parkinson",
     questionsList: parkinsonQ,
     navigate: "../parkinson",
     Name: parkinsonTopic,
+    apps_id: "app04",
   },
   {
     Name: solidLightTopic,
     path: "/solidLight",
     questionsList: solidLightQ,
     navigate: "../solidLight",
+    apps_id: "app05",
   },
 ];
 
@@ -42,6 +57,7 @@ const routerConfig = projectList.map((project) => {
       <App
         questionsList={project.questionsList}
         projectName={project.Name}
+        apps_id={project.apps_id}
         linkList={linkList}
       />
     ),

@@ -9,9 +9,18 @@ import { QuestionsProps } from "../Questions";
 type BtnPros = {
   questions: QuestionsProps[];
   projectName: string;
+  email: string | null;
+  token: string | null;
+  apps_id: string;
 };
 
-const SubmitBtn: React.FC<BtnPros> = ({ questions, projectName }) => {
+const SubmitBtn: React.FC<BtnPros> = ({
+  questions,
+  projectName,
+  email,
+  token,
+  apps_id,
+}) => {
   const data = useBtnContext();
   const [btnAble, setBtnAble] = useState(false);
   const [open, setOpen] = useState(false);
@@ -22,6 +31,33 @@ const SubmitBtn: React.FC<BtnPros> = ({ questions, projectName }) => {
   const [wrongAns, setWrongAns] = useState<number[]>([]);
 
   const state = useRef(0);
+
+  async function post(
+    email: string | null,
+    token: string | null,
+    apps_id: string
+  ) {
+    let formdata = new FormData();
+    let data: string = `[{"email":${email},"token":${token},"apps_id":${apps_id},"score":1}]`;
+    formdata.append("message", data);
+    let requestOptions = {
+      method: "POST",
+      body: formdata,
+    };
+
+    try {
+      let res = await fetch(
+        "https://cuhk.iontec.com.hk/api.php",
+        requestOptions
+      );
+      let json = await res.json();
+      console.log(json);
+      console.log(json.response);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   function btnHandler() {
     state.current = 1;
     setHvntAns([]);
@@ -39,6 +75,10 @@ const SubmitBtn: React.FC<BtnPros> = ({ questions, projectName }) => {
         state.current = 3;
         setHvntAns((prev) => [...prev, questions[i].questionNumber]);
       }
+    }
+
+    if (state.current === 1) {
+      post(email, token, apps_id);
     }
 
     console.log(data.UserAns);

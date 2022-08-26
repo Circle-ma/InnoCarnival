@@ -40,17 +40,19 @@ type QuestionsListProps = {
   questionsList: QuestionsProps[];
   projectName: string;
   linkList: { navigate: string; projectName: string }[];
+  apps_id: string;
 };
 
 const App: React.FC<QuestionsListProps> = ({
   questionsList,
   projectName,
   linkList,
+  apps_id,
 }) => {
   let [searchParams] = useSearchParams();
   let email = searchParams.get("email");
-  //const apps_id = searchParams.get("apps_id");
-  //const token = searchParams.get("token");
+  // const apps_id = searchParams.get("apps_id");
+  const token = searchParams.get("token");
 
   return (
     <>
@@ -61,7 +63,13 @@ const App: React.FC<QuestionsListProps> = ({
             <Tiltle projectName={projectName} />
             <BtnProvider>
               <QuestionCardList questions={questionsList} />
-              <SubmitBtn questions={questionsList} projectName={projectName} />
+              <SubmitBtn
+                questions={questionsList}
+                projectName={projectName}
+                apps_id={apps_id}
+                email={email}
+                token={token}
+              />
             </BtnProvider>
           </Container>
         </Bg>
