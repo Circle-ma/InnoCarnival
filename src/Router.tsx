@@ -1,5 +1,6 @@
 import { useRoutes } from "react-router-dom";
-import App from "./App";
+import Mc from "./Mc";
+import Face from "./Face";
 import bugQ, { bugTopic } from "./mcq/bug/Questions";
 import dnaQ, { dnaTopic } from "./mcq/dna/Questions";
 import herbChainQ, { herbChainTopic } from "./mcq/herbchain/Questions";
@@ -50,11 +51,11 @@ const linkList = projectList.map((project) => {
   return { navigate: project.navigate, projectName: project.Name };
 });
 
-const routerConfig = projectList.map((project) => {
+const MC = projectList.map((project) => {
   return {
     path: project.path,
     element: (
-      <App
+      <Mc
         questionsList={project.questionsList}
         projectName={project.Name}
         apps_id={project.apps_id}
@@ -63,6 +64,10 @@ const routerConfig = projectList.map((project) => {
     ),
   };
 });
+
+const FACE = [{ path: "/facialmask", element: <Face /> }];
+
+const routerConfig = MC.concat(FACE);
 
 const Router: React.FC = () => {
   const element = useRoutes(routerConfig);

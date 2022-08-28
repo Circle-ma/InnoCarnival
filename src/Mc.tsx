@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
 import { Container, createTheme, ThemeProvider } from "@mui/material";
-import McAppBar from "./components/McAppBar";
-import SubmitBtn from "./components/SubmitBtn";
-import Tiltle from "./components/Tiltle";
+import McAppBar from "./McComponents/McAppBar";
+import SubmitBtn from "./McComponents/SubmitBtn";
+import Tiltle from "./McComponents/Tiltle";
 import { BtnProvider } from "./UserAns";
-import QuestionCardList from "./components/QuestionCardList";
+import QuestionCardList from "./McComponents/QuestionCardList";
 import { QuestionsProps } from "./Questions";
 import { useSearchParams } from "react-router-dom";
 
@@ -43,7 +43,7 @@ type QuestionsListProps = {
   apps_id: string;
 };
 
-const App: React.FC<QuestionsListProps> = ({
+const Mc: React.FC<QuestionsListProps> = ({
   questionsList,
   projectName,
   linkList,
@@ -78,4 +78,4 @@ const App: React.FC<QuestionsListProps> = ({
   );
 };
 
-export default App;
+export default Mc;
