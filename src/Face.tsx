@@ -51,14 +51,12 @@ const font = createTheme({
 
 export type UrlData = {
   email: string | null;
-  apps_id: string | null;
   token: string | null;
 };
 
 const Face: React.FC = () => {
   const [searchParams] = useSearchParams();
   const email = searchParams.get("email");
-  const apps_id = searchParams.get("apps_id");
   const token = searchParams.get("token");
   return (
     <>
@@ -68,7 +66,7 @@ const Face: React.FC = () => {
           <Box padding={7} />
           <Container>
             <ThemeProvider theme={font}>
-              <MainPage email={email} apps_id={apps_id} token={token} />
+              <MainPage email={email} token={token} />
             </ThemeProvider>
           </Container>
           <Box padding={7} />

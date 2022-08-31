@@ -38,8 +38,9 @@ const SubmitBtn: React.FC<BtnPros> = ({
     apps_id: string
   ) {
     let formdata = new FormData();
-    let data: string = `[{"email":${email},"token":${token},"apps_id":${apps_id},"score":1}]`;
+    let data: string = `[{"email":"${email}","token":"${token}","apps_id":"${apps_id}","score":1}]`;
     formdata.append("message", data);
+    console.log(data);
     let requestOptions = {
       method: "POST",
       body: formdata,

@@ -33,19 +33,16 @@ const TigerImage = styled.img`
   display: block;
 `;
 
-const MainPage: React.FC<UrlData> = ({ email, apps_id, token }) => {
+const MainPage: React.FC<UrlData> = ({ email, token }) => {
   const [resultUrl, setResultUrl] = useState("");
   const [isFail, setIsFail] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isStart, setIsStart] = useState(false);
 
-  async function post(
-    email: string | null,
-    token: string | null,
-    apps_id: string | null
-  ) {
+  async function post(email: string | null, token: string | null) {
     let formdata = new FormData();
-    let data: string = `[{"email":${email},"token":${token},"apps_id":${apps_id},"score":1}]`;
+    let data: string = `[{"email":"${email}","token":"${token}","apps_id":"app06","score":1}]`;
+    console.log(data);
     formdata.append("message", data);
     let requestOptions = {
       method: "POST",
@@ -95,11 +92,11 @@ const MainPage: React.FC<UrlData> = ({ email, apps_id, token }) => {
 
   function handleCatUpload(event: any) {
     send("cat", event);
-    post(email, token, apps_id);
+    post(email, token);
   }
   function handleTigerUpload(event: any) {
     send("tiger", event);
-    post(email, token, apps_id);
+    post(email, token);
   }
 
   return (
