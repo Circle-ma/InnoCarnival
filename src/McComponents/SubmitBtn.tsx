@@ -51,9 +51,8 @@ const SubmitBtn: React.FC<BtnPros> = ({
         "https://cuhk.iontec.com.hk/api.php",
         requestOptions
       );
-      let json = await res.json();
-      console.log(json);
-      console.log(json.response);
+      let response = await res.text();
+      console.log(response);
     } catch (err) {
       console.log(err);
     }

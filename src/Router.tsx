@@ -6,6 +6,7 @@ import dnaQ, { dnaTopic } from "./mcq/dna/Questions";
 import herbChainQ, { herbChainTopic } from "./mcq/herbchain/Questions";
 import parkinsonQ, { parkinsonTopic } from "./mcq/parkinson/Questions";
 import solidLightQ, { solidLightTopic } from "./mcq/solidLight/Questions";
+import riskManQ, { riskManTopic } from "./mcq/riskman/Questions";
 // import Questions, { ProjectName } from "./Questions";
 
 const projectList = [
@@ -44,6 +45,13 @@ const projectList = [
     questionsList: solidLightQ,
     navigate: "../solidLight",
     apps_id: "app05",
+  },
+  {
+    Name: riskManTopic,
+    path: "/riskman",
+    questionsList: riskManQ,
+    navigate: "../riskman",
+    apps_id: "app07",
   },
 ];
 
