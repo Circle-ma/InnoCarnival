@@ -38,6 +38,8 @@ const MainPage: React.FC<UrlData> = ({ email, token }) => {
   const [isFail, setIsFail] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isStart, setIsStart] = useState(false);
+  const [fileName, setFileName] = useState("");
+  const [fileSize, setFileSize] = useState(0);
 
   async function post(email: string | null, token: string | null) {
     let formdata = new FormData();
@@ -91,10 +93,14 @@ const MainPage: React.FC<UrlData> = ({ email, token }) => {
   }
 
   function handleCatUpload(event: any) {
+    setFileName(event.target.files[0].name);
+    setFileSize(event.target.files[0].size);
     send("cat", event);
     post(email, token);
   }
   function handleTigerUpload(event: any) {
+    setFileName(event.target.files[0].name);
+    setFileSize(event.target.files[0].size);
     send("tiger", event);
     post(email, token);
   }
@@ -140,7 +146,7 @@ const MainPage: React.FC<UrlData> = ({ email, token }) => {
                 >
                   <input
                     hidden
-                    accept="image/*"
+                    accept=".jpg,.png"
                     type="file"
                     onChange={handleCatUpload}
                   />
@@ -161,7 +167,7 @@ const MainPage: React.FC<UrlData> = ({ email, token }) => {
                 >
                   <input
                     hidden
-                    accept="image/*"
+                    accept=".jpg,.png"
                     type="file"
                     onChange={handleTigerUpload}
                   />
@@ -173,7 +179,14 @@ const MainPage: React.FC<UrlData> = ({ email, token }) => {
         </Box>
         <Card>
           <Box textAlign={"center"} padding={3}>
-            <Box textAlign={"center"}>{isLoading && <CircularProgress />}</Box>
+            <Box textAlign={"center"}>
+              {isLoading && (
+                <Typography>
+                  {fileName} has a size of {fileSize} bytes.
+                </Typography>
+              )}
+              {isLoading && <CircularProgress />}
+            </Box>
             {!isLoading && isFail && (
               <Typography sx={{ color: "red" }}>
                 錯誤！請上載人臉的相片，並用jpg或png格式。
