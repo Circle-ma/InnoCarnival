@@ -25,7 +25,7 @@ const Result: React.FC<resultProps> = ({
       alert = (
         <Alert onClose={handleClose} severity="success" variant="filled">
           <AlertTitle>{projectName}</AlertTitle>
-          答對了,給你一個大大的讚!
+          恭喜你答對了！已得1分，請關閉視窗，繼續玩其他遊戲。
         </Alert>
       );
       break;

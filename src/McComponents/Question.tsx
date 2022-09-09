@@ -14,7 +14,7 @@ const Question: React.FC<QuestionProps> = ({ topic, description }) => {
   return (
     <>
       <Typography variant="h5">{topic}</Typography>
-      <Typography marginY={2}>
+      <Typography component={"span"} marginY={2}>
         <Ndiv>{description}</Ndiv>
       </Typography>
     </>

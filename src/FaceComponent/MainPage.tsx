@@ -181,11 +181,13 @@ const MainPage: React.FC<UrlData> = ({ email, token }) => {
           <Box textAlign={"center"} padding={3}>
             <Box textAlign={"center"}>
               {isLoading && (
-                <Typography>
-                  {fileName} has a size of {fileSize} bytes.
-                </Typography>
+                <Box>
+                  <Typography>
+                    {fileName} has a size of {fileSize} bytes.
+                  </Typography>
+                  <CircularProgress />
+                </Box>
               )}
-              {isLoading && <CircularProgress />}
             </Box>
             {!isLoading && isFail && (
               <Typography sx={{ color: "red" }}>
@@ -193,10 +195,17 @@ const MainPage: React.FC<UrlData> = ({ email, token }) => {
               </Typography>
             )}
             {!isFail && !isLoading && (
-              <Image
-                src={resultUrl}
-                alt="請上載人臉的相片，並用jpg或png格式。"
-              />
+              <Box>
+                <Image
+                  src={resultUrl}
+                  alt="請上載人臉的相片，並用jpg或png格式。"
+                />
+                {isStart && !isFail && !isLoading && (
+                  <Typography>
+                    恭喜你！已得1分，請關閉視窗，繼續玩其他遊戲。
+                  </Typography>
+                )}
+              </Box>
             )}
           </Box>
         </Card>
