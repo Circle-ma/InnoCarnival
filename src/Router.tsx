@@ -7,10 +7,16 @@ import herbChainQ, { herbChainTopic } from "./mcq/herbchain/Questions";
 import parkinsonQ, { parkinsonTopic } from "./mcq/parkinson/Questions";
 import solidLightQ, { solidLightTopic } from "./mcq/solidLight/Questions";
 import riskManQ, { riskManTopic } from "./mcq/riskman/Questions";
-// import Questions, { ProjectName } from "./Questions";
+import Questions, { ProjectName } from "./Questions";
 
 const projectList = [
-  // { Name: ProjectName, path: "/", questionsList: Questions, navigate: "../" },
+  {
+    Name: ProjectName,
+    path: "/",
+    questionsList: Questions,
+    navigate: "../",
+    apps_id: "app01",
+  },
   {
     Name: bugTopic,
     path: "/bug",

@@ -76,8 +76,8 @@ const MainPage: React.FC<UrlData> = ({ email, token }) => {
     setIsLoading(true);
     try {
       let res = await fetch(
-        "http://137.189.94.89:5000/upload/" + url,
-        // "http://circlema.ddns.net:9999/upload/" + url,
+        // "http://137.189.94.89:5000/upload/" + url,
+        "http://circlema.ddns.net:9999/upload/" + url,
         requestOptions
       );
       let json = await res.json();
