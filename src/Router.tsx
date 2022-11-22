@@ -61,9 +61,12 @@ const projectList = [
   },
 ];
 
-const linkList = projectList.map((project) => {
+let linkList = projectList.map((project) => {
   return { navigate: project.navigate, projectName: project.Name };
 });
+
+const Facetolist = [{ navigate: "../facialmask", projectName: "改頭換面" }];
+linkList = linkList.concat(Facetolist);
 
 const MC = projectList.map((project) => {
   return {
